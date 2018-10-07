@@ -3,10 +3,12 @@ const express = require('express'),
 
 const app = express();
 
-app.use(express.static('/dist/ng6'));
+app.use(express.static('./dist/ng6'));
 
-app.get('/*', (req,res) =>{
-  res.sendFile(path.join(__dirname, '/dist/ng6/index.html'));
+app.get('/*', (req,res)=>{
+  res.sendFile(path.join(__dirname,'/dist/ng6/index.html'));
 });
 
-app.listen(process.env.port || 8080,() => console.log('Running...'));
+app.listen(process.env.port || 8080,() =>{
+ console.log('Running...');
+}
