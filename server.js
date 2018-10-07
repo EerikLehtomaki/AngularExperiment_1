@@ -9,6 +9,6 @@ app.get('/*', (req,res)=>{
   res.sendFile(path.join(__dirname,'/dist/ng6/index.html'));
 });
 
-app.listen(process.env.port || 8080,() =>{
+app.listen(process.env.PORT || 8080, ()=>{
  console.log('Running...');
 }
